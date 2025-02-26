@@ -1,0 +1,479 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #fbf5b5;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 25px 50px 25px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:30px;
+    width: 80%;
+    max-width: 1200px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .hero-text {
+    flex: 1;
+    margin-left: 40px;
+    max-width: 50%;
+    text-align: left;
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slideInLeft 1s ease-in-out forwards;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .highlight {
+    color: #FF6600;
+    font-weight: bold;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(to left, #F2910A 15%, #E94822 80%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #e65c00;
+    transform: scale(1.1);
+  }
+  
+  /* Hero Image Animation */
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    transform: translateX(50px);
+    opacity: 0;
+    animation: slideInRight 1s ease-in-out forwards;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hero-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Features Section */
+  .features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 10%;
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .features-heading {
+    width: 40%;
+  }
+  
+  .features-heading h1 {
+    font-size: 3rem;
+    color: #ff512f;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .features-heading h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .features-heading .description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .features-heading h3 {
+    font-size: 1.3rem;
+    color: #ff512f;
+    font-weight: 600;
+  }
+  
+  .feature-boxes {
+    position: relative;
+    width: 55%;
+    height: 550px;
+  }
+  
+  .feature {
+    position: absolute;
+    width: 240px;
+    height: 130px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+  }
+  
+  /* Colorful gradients for each box */
+  .feature-1 { background: linear-gradient(135deg, #ff9a9e, #fad0c4); top: 100px; left: 10%; }
+  .feature-2 { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); top: 200px; left: 35%; }
+  .feature-3 { background: linear-gradient(135deg, #ffecd2, #fcb69f); top: 380px; left: 15%; }
+  .feature-4 { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); top: 70px; right: 5%; }
+  .feature-5 { background: linear-gradient(145deg, #d4fc79, #96e6a1); top: 320px; right: 18%; }
+  
+  .feature:hover {
+    transform: scale(1.08) rotate(3deg);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .features-heading {
+        width: 100%;
+        text-align: center;
+    }
+  
+    .features-heading h1 {
+        font-size: 2rem;
+    }
+  
+    .features-heading h2 {
+        font-size: 1.5rem;
+    }
+  
+    .feature-boxes {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        position: static;
+    }
+  
+    .feature {
+        position: static;
+        width: 80%;
+        height: 110px;
+    }
+  }
+  
+  
+  
+  /* Job & Blog Cards */
+  
+  /* Job Listings Section */
+  .job-listings {
+    text-align: center;
+    padding: 0px 20px 30px 20px;
+    
+  }
+  
+  .job-listings h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  /* Carousel Container */
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .nav-btn {
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .nav-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Job Cards */
+  .job-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 85%;
+    padding: 40px;
+    justify-content: center;
+  }
+  
+  .job-card {
+    background: linear-gradient(to top, #FBF5E5 30%, #fa9405 70%);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin: 5px 10px;
+    transition: transform 0.5s ease-in-out, background 0.5s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .job-card:hover {
+    background: linear-gradient(135deg, #fa9405, #e94822);
+    transform: translateY(-10px) scale(1.05);
+  }
+  
+  .center-card {
+      transform: scale(1.05); /* Reduced from 1.1 to 1.05 for uniformity */
+      border: 2px solid #ff1e9c;
+      transition: transform 0.5s ease-in-out, border 0.3s ease-in-out;
+  }
+  
+  .job-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .job-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .job-card span {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #00ff88;
+  }
+  
+  /* Apply Button */
+  .apply-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #252aff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .apply-btn:hover {
+    background-color: #00ff88;
+    color: #000;
+  }
+  
+  /* Photo Section in Card */
+  .photo-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .photo-container:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .job-carousel {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .job-card {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Upload Section Styling */
+  .upload-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .upload-section {
+    text-align: center;
+    background: linear-gradient(to left, #e65c00 30%, #fa9405 70%);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    animation: zoomIn 0.8s;
+  }
+  
+  .upload-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+    animation: fadeInDown 1.2s;
+  }
+  
+  .upload-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+    animation: fadeInLeft 1s;
+  }
+  
+  .upload-section button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: #252aff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: fadeInUp 1.5s;
+  }
+  
+  .upload-section button:hover {
+    background-color: #00ff88;
+    color: #000;
+    animation: bounce 1s;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .upload-section {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .upload-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
